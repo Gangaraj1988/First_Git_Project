@@ -1,3 +1,4 @@
 File A
 Added feature line in dev branch
 This line is added in dev-feature branch
+Conflict line from main branch
