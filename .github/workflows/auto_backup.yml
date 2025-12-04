@@ -1,13 +1,16 @@
-name: Auto backup
+name: Auto Backup
+
 on:
-push:
-branches:
-main:
+  push:
+    branches:
+      - main
+
 jobs:
-run-backup:
-run-on: ubuntu-latest
-steps:
--name: Checkout Repository
-uses:actions/checkout@v3
--name: Run Backup Script
-run: bash Auto_backup.sh
+  run-backup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Run Backup Script
+        run: bash Auto_backup.sh
